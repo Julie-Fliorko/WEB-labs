@@ -1,0 +1,59 @@
+.footer {
+    margin-top: 41.39px;
+    padding-bottom: 36px;
+    background: #222F33;
+}
+
+.logo__footer {
+    margin-top: 35px;
+    margin-left: 435px;
+}
+
+.email {
+    top: -10px;
+    margin-left: -384px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.cookies {
+    margin-left: 760px;
+    margin-top: -30px;
+}
+
+.cookies a {
+    text-decoration: none;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.privacy {
+    margin-left: 850px;
+    margin-top: -18px;
+}
+
+.privacy a {
+    text-decoration: none;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
