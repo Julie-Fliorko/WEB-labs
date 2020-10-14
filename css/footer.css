@@ -1,5 +1,4 @@
 .footer {
-    margin-top: 41.39px;
     padding-bottom: 36px;
     background: #222F33;
 }
@@ -56,4 +55,102 @@
     color: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.6;
+}
+
+@media only screen and (max-width:1200px) {
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+        width: 1000px;
+        margin: 0 auto;
+        /*fix width*/
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+    }
+    .logo__footer {
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+    .email {
+        top: -10px;
+        margin-left: -584px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+    .cookies {
+        margin-left: 300px;
+        margin-top: -30px;
+    }
+    .privacy {
+        margin-left: 370px;
+        margin-top: -18px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .logo__footer {
+        margin-top: 35px;
+        margin-left: 310px;
+    }
+    .email {
+        top: -15px;
+        margin-left: -420px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+    .cookies {
+        margin-left: 560px;
+        margin-top: -15px;
+    }
+    .privacy {
+        margin-left: 620px;
+        margin-top: -19px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .footer {
+        padding-bottom: 36px;
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+    }
 }

@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
     <!--Rubik-->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!--css sheets-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/about_text.css">
+    <link rel="stylesheet" href="css/usp.css">
     <link rel="stylesheet" href="css/footer.css">
 
 </head>
@@ -24,9 +26,13 @@
     <header class="header">
         <div class="container header_container">
             <img src="img/logo.svg" alt="home" class="logo_header">
-            <nav>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
 
-                <ul class="header_nav">
+            <nav class="header_navigation" id="header_navigation">
+
+                <ul class="header_nav" id="header_nav">
                     <li class="header_nav btn_modellen">
                         <a class="btn_modellen_link header_nav_link">Modellen</a>
                     </li>
@@ -44,17 +50,18 @@
                     </li>
                 </ul>
             </nav>
+
             <div class="social text__style__social">
 
                 <ul class="social__list">
-                    <li class="social__instagram">
-                        <a class="social__instagram_link">Instagram</a>
+                    <li class="social__item">
+                        <a>Instagram</a>
                     </li>
-                    <li class="social__facebook">
-                        <a class="social__facebook_link">Facebook</a>
+                    <li class="social__item">
+                        <a>Facebook</a>
                     </li>
-                    <li class="social__linkedin">
-                        <a class="social__linkedin_link">Linkedin</a>
+                    <li class="social__item">
+                        <a>Linkedin</a>
                     </li>
 
                 </ul>
@@ -137,37 +144,37 @@
 
     <div class="container usp">
         <div class="usp_img"></div>
-        <div class="header_pr_one">
+        <div class="header_pr_one ">
             <b>Wood</b>
         </div>
         <div class="text_pr_one">
             De draagconstructies van<br>EcoCabins bestaan uit<br>hout. Hout is duurzaam en.
         </div>
-        <div class="header_pr_two">
+        <div class="header_pr_two ">
             <b>Workmanship</b>
         </div>
         <div class="text_pr_two">
             De draagconstructies van<br>EcoCabins bestaan uit<br>hout. Hout is duurzaam en.
         </div>
-        <div class="header_pr_three">
+        <div class="header_pr_three ">
             <b>Steel base</b>
         </div>
-        <div class="text_pr_three">
+        <div class="text_pr_three ">
             Het stalen onderstel is<br>sterk zijn en heeft de<br>benodigde stijfheid die
         </div>
-        <div class="header_pr_four">
+        <div class="header_pr_four header_usp_line_2">
             <b>Glass wool </b>
         </div>
         <div class="text_pr_four">
             De combinatie van glaswol<br>met een houtskelet<br>constructie geeft een.
         </div>
-        <div class="header_pr_five">
+        <div class="header_pr_five ">
             <b>Triple glass</b>
         </div>
         <div class="text_pr_five">
             De combinatie van glaswol<br>met een houtskelet<br>constructie geeft een.
         </div>
-        <div class="header_pr_six">
+        <div class="header_pr_six ">
             <b>Infrared floor</b>
         </div>
         <div class="text_pr_six">
@@ -189,6 +196,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="javascript/hamburger.js"></script>
 </body>
 
 </html>
