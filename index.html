@@ -26,30 +26,35 @@
     <header class="header">
         <div class="container header_container">
             <img src="img/logo.svg" alt="home" class="logo_header">
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div id="menu-bar">
 
-            <nav class="header_navigation" id="header_navigation">
+                <div id="menu" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="header_navigation" id="header_navigation">
 
-                <ul class="header_nav" id="header_nav">
-                    <li class="header_nav btn_modellen">
-                        <a class="btn_modellen_link header_nav_link">Modellen</a>
-                    </li>
-                    <li class="header_nav btn_kopen">
-                        <a class="btn_kopen_link header_nav_link">Kopen</a>
-                    </li>
-                    <li class="header_nav btn_huren">
-                        <a class="btn_huren_link header_nav_link">Huren</a>
-                    </li>
-                    <li class="header_nav btn_nieuws">
-                        <a class="btn_nieuws_link header_nav_link">Nieuws</a>
-                    </li>
-                    <li class="btn_contact">
-                        <a class="btn_contact_link header_nav_link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+                    <ul class="header_nav" id="header_nav">
+                        <li class="header_nav btn_modellen">
+                            <a class="btn_modellen_link header_nav_link">Modellen</a>
+                        </li>
+                        <li class="header_nav btn_kopen">
+                            <a class="btn_kopen_link header_nav_link">Kopen</a>
+                        </li>
+                        <li class="header_nav btn_huren">
+                            <a class="btn_huren_link header_nav_link">Huren</a>
+                        </li>
+                        <li class="header_nav btn_nieuws">
+                            <a class="btn_nieuws_link header_nav_link">Nieuws</a>
+                        </li>
+                        <li class="btn_contact">
+                            <a class="btn_contact_link header_nav_link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
 
             <div class="social text__style__social">
 
@@ -102,11 +107,9 @@
                     <img src="img/Oval.png" alt="Some error">
                 </div>
 
-
                 <div class="oval__opacity__1">
                     <img src="img/Oval.png" alt="Some error">
                 </div>
-
 
                 <div class="oval__opacity__2">
                     <img src="img/Oval.png" alt="Some error">
@@ -117,10 +120,8 @@
                 </div>
             </div>
 
-
         </div>
     </section>
-
 
     <section class="about_text">
         <div class="container about_text">
@@ -182,7 +183,6 @@
         </div>
     </div>
     </section>
-
 
     <footer class="footer">
         <div class="container">

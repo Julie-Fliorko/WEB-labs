@@ -70,12 +70,29 @@ li {
 @media only screen and (max-width:767px) {
     .container {
         width: 100%;
-        height: 600px;
+        height: 100%;
+    }
+    .intro {
+        padding-bottom: 10px;
     }
 }
 
 @media only screen and (max-width:575px) {
     .container {
         width: 100%;
+        height: 100%
+    }
+    .intro {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .container {
+        width: 100%;
+        height: 100%
+    }
+    .intro {
+        padding-bottom: 20px;
     }
 }

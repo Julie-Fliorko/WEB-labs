@@ -1,5 +1,4 @@
 .footer {
-    padding-bottom: 36px;
     background: #222F33;
 }
 
@@ -142,7 +141,22 @@
         padding-bottom: 36px;
         background: #222F33;
         width: 100%;
+        height: 50px;
         margin: 0 auto;
+    }
+    .logo__footer {
+        top: -400px;
+        margin-top: 10px;
+        margin-left: 40%;
+    }
+    .email {
+        margin-left: -55%;
+    }
+    .cookies {
+        margin-left: 70%;
+    }
+    .privacy {
+        margin-left: 80%;
     }
 }
 
@@ -152,5 +166,81 @@
         background: #222F33;
         width: 100%;
         margin: 0 auto;
+    }
+    .email {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        margin-left: -50%;
+    }
+    .cookies {
+        margin-left: 65%;
+    }
+    .privacy {
+        margin-left: 80%;
+    }
+    .logo__footer {
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width:535px) {
+    .footer {
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+        height: 75px;
+    }
+    .email {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        margin-left: -90%;
+    }
+    .cookies {
+        margin-top: 15px;
+        margin-left: 65%;
+    }
+    .privacy {
+        margin-left: 80%;
+    }
+    .logo__footer {
+        margin-left: 65%;
+    }
+}
+
+@media only screen and (max-width:385px) {
+    .footer {
+        background: #222F33;
+        width: 100%;
+        margin: 0 auto;
+        height: 95px;
+    }
+    .email {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        margin-left: -858;
+    }
+    .cookies {
+        margin-top: 0px;
+        margin-left: 5%;
+    }
+    .privacy {
+        margin-top: 0px;
+        margin-left: 5%;
+    }
+    .logo__footer {
+        margin-left: 50%;
+        padding-bottom: 20px;
     }
 }

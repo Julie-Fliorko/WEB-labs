@@ -1,6 +1,4 @@
-const hamburger = document.getElementById('hamburger')
-const headerNav = document.getElementById('header_navigation')
-
-hamburger.addEventListener('click', () => {
-    headerNav.classList.toggle('show');
-});
+function onClickMenu() {
+    document.getElementById("menu").classList.toggle("change");
+    document.getElementById("header_nav").classList.toggle("change");
+}
