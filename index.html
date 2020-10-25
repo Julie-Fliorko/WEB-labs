@@ -4,200 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoCabins landingspage</title>
 
-    <!--Merriweather-->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
-    <!--Rubik-->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-    <!--css sheets-->
+    <!--Links-->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/intro.css">
-    <link rel="stylesheet" href="css/about_text.css">
-    <link rel="stylesheet" href="css/usp.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <title>My little tableware store</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="container header_container">
-            <img src="img/logo.svg" alt="home" class="logo_header">
-            <div id="menu-bar">
-
-                <div id="menu" onclick="onClickMenu()">
-                    <div id="bar1" class="bar"></div>
-                    <div id="bar2" class="bar"></div>
-                    <div id="bar3" class="bar"></div>
-                </div>
-                <nav class="header_navigation" id="header_navigation">
-
-                    <ul class="header_nav" id="header_nav">
-                        <li class="header_nav btn_modellen">
-                            <a class="btn_modellen_link header_nav_link">Modellen</a>
-                        </li>
-                        <li class="header_nav btn_kopen">
-                            <a class="btn_kopen_link header_nav_link">Kopen</a>
-                        </li>
-                        <li class="header_nav btn_huren">
-                            <a class="btn_huren_link header_nav_link">Huren</a>
-                        </li>
-                        <li class="header_nav btn_nieuws">
-                            <a class="btn_nieuws_link header_nav_link">Nieuws</a>
-                        </li>
-                        <li class="btn_contact">
-                            <a class="btn_contact_link header_nav_link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
-
-            <div class="social text__style__social">
-
-                <ul class="social__list">
-                    <li class="social__item">
-                        <a>Instagram</a>
+        <container class="container header"></container>
+        <div>
+            <nav class="menu-bar">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">Bowl store</a>
                     </li>
-                    <li class="social__item">
-                        <a>Facebook</a>
+                    <li>
+                        <a class="catalog" href="index.html">My bowls</a>
                     </li>
-                    <li class="social__item">
-                        <a>Linkedin</a>
+                    <li>
+                        <a class="create" href="create.html">Create new bowl</a>
                     </li>
-
+                    <li>
+                        <a class="edit" href="edit.html">Edit bowl</a>
+                    </li>
                 </ul>
-            </div>
-
-            <div class="offer_construction">
-                <p class="header_text">Sustainable tiny houses</p>
-                <b class="header_text_bold">An ecological tiny house is<br>constructed from as much<br>sustainable natural<br>materials as possible</b>
-            </div>
-
-            <div class="btn_play">
-                <a href="https://www.youtube.com">
-                    <div class="btn_play_container">
-                        <img src="img/btn_play.svg" alt="img">
-                        <span> Watch the movie</span>
-                    </div>
-                </a>
-            </div>
+                <form class="search">
+                    <input type="text" placeholder="Search.." class="search_block" id="search_block" value={this.state.searchString} onChange={this.handleChange}>
+                    <button class="search_btn">SEARCH</button>
+                </form>
+            </nav>
         </div>
+
     </header>
-
-    <section>
-        <div class="container intro">
-            <div class="intro">
-                <div class="intro_header">
-                    <b>Durable materials</b>
-                </div>
-                <div class="intro_text">
-                    All EcoCabins have a high insulation value, are produced with<br>sustainable and / or natural materials where possible and<br>have the "round corners" as a striking external characteristic,<br>made possible by the specific use of materials.
-                    The
-                    <br>advantages of building with wood are many: wood is light,<br>flexible, insulates well and builds quickly and efficiently.
-                </div>
-                <button class="btn_read_more">Read more</button>
+    <aside>
+        <div class="vertical_menu">
+            <h1 class="filter_header">Filter</h1>
+            <p>PRICE</p>
+            <div>
+                <input type="checkbox" class="sort_by_price_asc">
+                <label for="sort_by_price_asc">ascending</label>
             </div>
-            <!--slide show-->
-            <div class="img__section__1">
-                <div class="oval">
-                    <img src="img/Oval.png" alt="Some error">
-                </div>
-
-                <div class="oval__opacity__1">
-                    <img src="img/Oval.png" alt="Some error">
-                </div>
-
-                <div class="oval__opacity__2">
-                    <img src="img/Oval.png" alt="Some error">
-                </div>
-
-                <div class="oval__opacity__3">
-                    <img src="img/Oval.png" alt="Some error">
-                </div>
+            <div>
+                <input type="checkbox" class="sort_by_price_desc" placeholder="decsending">
+                <label for="sort_by_price_desc">descending</label>
+            </div>
+            <p>WEIGHT</p>
+            <div>
+                <input type="checkbox" class="sort_by_weight_asc">
+                <label for="sort_by_weight_asc">ascending</label>
+            </div>
+            <div>
+                <input type="checkbox" class="sort_by_weight_desc" placeholder="decsending">
+                <label for="sort_by_weight_desc">descending</label>
             </div>
 
+            <b>Total:   $$$</b>
         </div>
-    </section>
+    </aside>
+    <main class="main__container" id="main__container">
 
-    <section class="about_text">
-        <div class="container about_text">
-            <div class="about_text_header">
-                <b>Innovative</b>
-            </div>
-            <div class="two_column_text">
-                <div class="about_text_coloumn_one">
-                    Our goal is to continuously further develop and innovate<br>the EcoCabins, so that the EcoCabins are ultimately 100%<br>sustainable and circular. A condition for this is that the<br>EcoCabins remain affordable. With the help of the
-                    sun, the
-                    <br>wind and the best insulation you can enjoy.
-                </div>
-                <div class="about_text_coloumn_two">
-                    All EcoCabins have a high insulation value, are produced<br>with sustainable and / or natural materials where possible<br>and have the 'round corners' as a striking external<br>characteristic, made possible by the specific use of<br>materials.
-                    The advantages of building.
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="container usp">
-        <div class="usp_img"></div>
-        <div class="header_pr_one ">
-            <b>Wood</b>
-        </div>
-        <div class="text_pr_one">
-            De draagconstructies van<br>EcoCabins bestaan uit<br>hout. Hout is duurzaam en.
-        </div>
-        <div class="header_pr_two ">
-            <b>Workmanship</b>
-        </div>
-        <div class="text_pr_two">
-            De draagconstructies van<br>EcoCabins bestaan uit<br>hout. Hout is duurzaam en.
-        </div>
-        <div class="header_pr_three ">
-            <b>Steel base</b>
-        </div>
-        <div class="text_pr_three ">
-            Het stalen onderstel is<br>sterk zijn en heeft de<br>benodigde stijfheid die
-        </div>
-        <div class="header_pr_four header_usp_line_2">
-            <b>Glass wool </b>
-        </div>
-        <div class="text_pr_four">
-            De combinatie van glaswol<br>met een houtskelet<br>constructie geeft een.
-        </div>
-        <div class="header_pr_five ">
-            <b>Triple glass</b>
-        </div>
-        <div class="text_pr_five">
-            De combinatie van glaswol<br>met een houtskelet<br>constructie geeft een.
-        </div>
-        <div class="header_pr_six ">
-            <b>Infrared floor</b>
-        </div>
-        <div class="text_pr_six">
-            De vloer wordt opgewarmd<br>middels opgewekte warmte<br>uit eigen zonne-energie.
-        </div>
-    </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <img src="img/logo.svg" class="logo__footer" alt="Some error">
-            <b class="email">info@eco-cabins.com</b>
-            <div class="cookies">
-                <a href="#">Cookies</a>
-            </div>
-            <div class="privacy">
-                <a href="#">Privacybeleid</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="javascript/hamburger.js"></script>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

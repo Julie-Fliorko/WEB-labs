@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new plate</title>
+
+    <!--Links-->
+    <link rel="stylesheet" href="css/create.css">
+</head>
+
+<body>
+    <header>
+        <container class="container header"></container>
+        <div>
+            <nav class="menu-bar">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">Bowl store</a>
+                    </li>
+                    <li>
+                        <a class="catalog" href="index.html">My bowls</a>
+                    </li>
+                    <li>
+                        <a class="create" href="create.html">Create new bowl</a>
+                    </li>
+                    <li>
+                        <a class="edit" href="edit.html">Edit bowl</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="card">
+            <form>
+                <div>
+                    <input type='file' onchange="readURL(this);" />
+                    <img id="card_img" src="img/plate.png" alt="plate" />
+                </div>
+                <div>
+                    <input type="text" name="Title" placeholder="Title">
+                </div>
+                <div>
+                    <textarea type="text" name="Description" placeholder="Description"></textarea>
+                </div>
+                <div class="price">
+                    <input type="number" name="Price" placeholder="Price">
+                </div>
+                <div>
+                    <button>Create</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js/create.js"></script>
+</body>
+
+</html>

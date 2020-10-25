@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<body>
+    <header class="header">
+        <container class="container header"></container>
+        <div>
+            <nav class="menu-bar">
+                <ul>
+                    <li>
+                        <a class="logo" href="#">Bowl store</a>
+                    </li>
+                    <li>
+                        <a class="catalog" href="index.html">My bowls</a>
+                    </li>
+                    <li>
+                        <a class="create" href="create.html">Create new bowl</a>
+                    </li>
+                    <li>
+                        <a class="edit" href="edit.html">Edit bowl</a>
+                    </li>
+                </ul>
+                <form class="search">
+                    <input type="text" placeholder="Search.." class="search_block" id="search_input">
+                    <button class="search_btn">SEARCH</button>
+                </form>
+            </nav>
+        </div>
+
+    </header>
+    <!--<section>
+        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+            <input type="text" id="add-name" placeholder="New item">
+            <input type="submit" value="Add">
+        </form>
+
+        <div id="spoiler" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+                <input type="text" id="edit-name">
+                <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+
+        <p id="counter"></p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <tbody id="items">
+            </tbody>
+
+    </section>-->
+    <section class="main">
+        <div class="container">
+            <div class="main-container">
+                <aside class="main__tools">
+                    <h3 class="tools__title">Manage Garlands</h3>
+                    <div class="tools__toggle">
+                        <p class="tools__toggle-label">Sort by the longest garlands</p>
+                        <label class="tools__toggle-switch">
+                  <input type="checkbox" id="sort">
+                  <span class="tools__toggle-slider"></span>
+                </label>
+                    </div>
+                    <hr>
+                    <div class="tools__count">
+                        <p class="tools__count-label">Count total price of all garlands on the fair</p>
+                        <button class="button tools__count-button" id="count">Count</button>
+                        <div class="tools__count-results hidden" id="count_results">
+                            <p class="tools__results-label">Total price:</p>
+                            <p class="tools__results-result" id="count_total"></p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="main__items">
+                    <div class="main__buttons">
+                        <a class="button main__buttons-create" href="create.html">Create</a>
+                        <button class="button main__buttons-deleteall">Delete All</button>
+                    </div>
+                    <div class="main__items-container" id="items_container">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <script src="js/create.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+</body>
+
+</html>

@@ -55,26 +55,6 @@
     margin-top: -100px;
 }
 
-.vertical_menu {
-    overflow: hidden;
-    background: grey;
-    float: left;
-    width: 200px;
-    background: #ddd;
-    position: fixed;
-}
-
-.vertical_menu h1 {
-    margin-top: 50px;
-    margin-left: 55px;
-}
-
-.vertical_menu p {
-    margin-top: 30px;
-    margin-left: 10px;
-}
-
-.vertical_menu div {
-    margin-top: 5px;
-    margin-left: 20px;
+#spoiler {
+    display: none;
 }
