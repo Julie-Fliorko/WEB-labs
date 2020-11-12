@@ -1,73 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CRUD page</title>
 
-    <!--Links-->
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
-    <title>My little tableware store</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- UUID library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+
+    <!-- Bootstrap toggle switch -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <container class="container header"></container>
-        <div>
-            <nav class="menu-bar">
-                <ul>
-                    <li>
-                        <a class="logo" href="#">Bowl store</a>
-                    </li>
-                    <li>
-                        <a class="catalog" href="index.html">My bowls</a>
-                    </li>
-                    <li>
-                        <a class="create" href="create.html">Create new bowl</a>
-                    </li>
-                    <li>
-                        <a class="edit" href="edit.html">Edit bowl</a>
-                    </li>
-                </ul>
-                <form class="search">
-                    <input type="text" placeholder="Search.." class="search_block" id="search_block" value={this.state.searchString} onChange={this.handleChange}>
-                    <button class="search_btn">SEARCH</button>
-                </form>
-            </nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">My Bowl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">My bowls <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" data-toggle="modal" data-target="#createModal">Create</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="find_input" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0 mx-2" id="search_btn" type="submit">Search</button>
+                <button type="reset" class="btn btn-danger" id="clear-search_btn">Clear</button>
+                <!-- clear button -->
+            </form>
+        </div>
+    </nav>
+
+    <!--  CREATE MODAL  -->
+    <div id="createModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Create New Bowl</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="bowl-colour">Colour</label>
+                        <input type="text" class="form-control" id="bowl-colour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-style">Style</label>
+                        <input class="form-control" id="bowl-style"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-weight">Weight</label>
+                        <input type="number" class="form-control" id="bowl-weight" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-price">Price</label>
+                        <input type="number" class="form-control" id="bowl-price" min="1" required>
+                    </div>
+                    <button id="submit_btn" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                </div>
+                <div class="modal-footer">
+                    <button id="close_btn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--  -->
+
+    <!--  UPDATE MODAL  -->
+    <div id="updModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update existing bowl</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="bowl-colour">Colour</label>
+                        <input type="text" class="form-control" id="upd_bowl_colour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-style">Style</label>
+                        <input class="form-control" id="upd_bowl_style" rows="3"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-weight">Weight</label>
+                        <input type="number" class="form-control" id="upd_bowl_weight" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bowl-price">Price</label>
+                        <input type="number" class="form-control" id="upd_bowl_price" min="1" required>
+                    </div>
+                    <button id="update_btn" class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+                </div>
+                <div class="modal-footer">
+                    <button id="u_close_btn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <main role="main" class="container">
+
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="sidebar-sticky pt-3">
+                <h3 class="sidebar-heading d-flex justify-content-center align-items-center mb-4">Manage bowl</h3>
+                <div class="sort d-flex mx-2">
+                    <div class="sort_by_weight mx-2">Sort by weight descending</div>
+                    <input type="checkbox" id="sort-by-speed-descending" data-toggle="toggle">
+                </div>
+                <hr class="my-4">
+                <div class="total-count d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="total_price mb-3">Total bowl price count:</h5>
+                    <button class="btn btn-primary mb-5" id="claculate_price_count" type="submit">Count</button>
+                </div>
+                <div id="total_price_container">
+                </div>
+            </div>
+        </nav>
+
+        <div class="main">
+            <h1 class="main-title text-center mb-3">Bowls</h1>
+            <ul id="items_container" class="d-flex flex-lg-wrap align-items-center justify-content-around">
+            </ul>
         </div>
 
-    </header>
-    <aside>
-        <div class="vertical_menu">
-            <h1 class="filter_header">Filter</h1>
-            <p>PRICE</p>
-            <div>
-                <input type="checkbox" class="sort_by_price_asc">
-                <label for="sort_by_price_asc">ascending</label>
-            </div>
-            <div>
-                <input type="checkbox" class="sort_by_price_desc" placeholder="decsending">
-                <label for="sort_by_price_desc">descending</label>
-            </div>
-            <p>WEIGHT</p>
-            <div>
-                <input type="checkbox" class="sort_by_weight_asc">
-                <label for="sort_by_weight_asc">ascending</label>
-            </div>
-            <div>
-                <input type="checkbox" class="sort_by_weight_desc" placeholder="decsending">
-                <label for="sort_by_weight_desc">descending</label>
-            </div>
 
-            <b>Total:   $$$</b>
-        </div>
-    </aside>
-    <main class="main__container" id="main__container">
 
     </main>
-    <script src="js/script.js"></script>
-</body>
+    <!-- /.container -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </html>
